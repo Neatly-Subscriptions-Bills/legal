@@ -96,33 +96,11 @@
         letter-spacing: 0;
       }
 
-      .meta-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        margin-top: 24px;
-      }
-
-      .meta-card {
-        min-width: 0;
-        padding: 14px;
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        background: var(--surface-muted);
-      }
-
-      .meta-label {
-        display: block;
+      .last-updated {
+        margin: 18px 0 0;
         color: var(--muted);
-        font-size: 0.75rem;
-        font-weight: 800;
-      }
-
-      .meta-value {
-        display: block;
-        margin-top: 4px;
-        overflow-wrap: anywhere;
-        font-weight: 800;
+        font-size: clamp(1.15rem, 3vw, 1.7rem);
+        font-weight: 500;
       }
 
       .policy[hidden] { display: none; }
@@ -172,7 +150,7 @@
         .topline { align-items: flex-start; }
         .language-switcher { font-size: 0.82rem; }
         .brand-name { margin-top: 16px; }
-        .meta-grid { grid-template-columns: 1fr; }
+        .last-updated { font-size: 1.05rem; }
       }
     </style>
   </head>
@@ -188,24 +166,7 @@
           </div>
         </div>
         <h1 class="brand-name" data-i18n-en="Privacy Policy" data-i18n-uk="Політика конфіденційності">Privacy Policy</h1>
-        <div class="meta-grid" aria-label="Policy metadata">
-          <div class="meta-card">
-            <span class="meta-label" data-i18n-en="Effective date" data-i18n-uk="Дата набрання чинності">Effective date</span>
-            <span class="meta-value" data-i18n-en="May 31, 2026" data-i18n-uk="31 травня 2026 року">May 31, 2026</span>
-          </div>
-          <div class="meta-card">
-            <span class="meta-label" data-i18n-en="Developer" data-i18n-uk="Розробник">Developer</span>
-            <span class="meta-value">Serhii_Chornei</span>
-          </div>
-          <div class="meta-card">
-            <span class="meta-label" data-i18n-en="Contact" data-i18n-uk="Контакт">Contact</span>
-            <span class="meta-value"><a href="mailto:neatly.app-help@outlook.com">neatly.app-help@outlook.com</a></span>
-          </div>
-          <div class="meta-card">
-            <span class="meta-label" data-i18n-en="Android package" data-i18n-uk="Android package">Android package</span>
-            <span class="meta-value">com.neatly.subscriptions</span>
-          </div>
-        </div>
+        <p class="last-updated" data-i18n-en="Last updated: May 31, 2026" data-i18n-uk="Останнє оновлення: 31 травня 2026 року">Last updated: May 31, 2026</p>
       </header>
 
       <section class="content">
@@ -324,6 +285,7 @@
           <p>The updated version will be posted at the same Privacy Policy URL with a new effective date.</p>
 
           <h2 id="en-contact">14. Contact</h2>
+          <p>Developer: Serhii_Chornei.</p>
           <p>If you have questions about this Privacy Policy or how Neatly handles data, contact us at <a href="mailto:neatly.app-help@outlook.com">neatly.app-help@outlook.com</a>.</p>
         </article>
 
@@ -442,12 +404,13 @@
           <p>Оновлена версія буде розміщена за тим самим URL Політики конфіденційності з новою датою набрання чинності.</p>
 
           <h2 id="uk-contact">14. Контакти</h2>
+          <p>Розробник: Serhii_Chornei.</p>
           <p>Якщо у вас є запитання щодо цієї Політики конфіденційності або того, як Neatly працює з даними, напишіть нам на <a href="mailto:neatly.app-help@outlook.com">neatly.app-help@outlook.com</a>.</p>
         </article>
       </section>
 
       <footer class="footer">
-        <p>Neatly: Subscriptions &amp; Bills</p>
+        <p>&copy; 2026 Neatly: Subscriptions &amp; Bills</p>
       </footer>
     </main>
 
