@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Privacy Policy for Neatly: Subscriptions & Bills." />
+    <title>Privacy Policy | Neatly</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f8f8;
+        --surface: #ffffff;
+        --surface-muted: #eef3f3;
+        --text: #102222;
+        --muted: #536666;
+        --border: #dde7e7;
+        --primary: #008080;
+        --primary-dark: #006666;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      a { color: var(--primary); font-weight: 700; }
+
+      .page {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 20px;
+        padding: 28px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand-name {
+        margin: 0;
+        font-size: clamp(2rem, 6vw, 4rem);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--primary);
+        font-size: 0.83rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .subtitle {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .language-switcher {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
+        padding: 4px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface-muted);
+      }
+
+      .language-switcher button {
+        min-height: 40px;
+        min-width: 108px;
+        border: 0;
+        border-radius: 6px;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+      }
+
+      .language-switcher button[aria-pressed="true"] {
+        background: var(--primary);
+        color: #ffffff;
+      }
+
+      .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .meta-card {
+        min-width: 0;
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface-muted);
+      }
+
+      .meta-label {
+        display: block;
+        color: var(--muted);
+        font-size: 0.75rem;
+        font-weight: 800;
+      }
+
+      .meta-value {
+        display: block;
+        margin-top: 4px;
+        overflow-wrap: anywhere;
+        font-weight: 800;
+      }
+
+      .content {
+        margin-top: 20px;
+        padding: 28px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+
+      .policy[hidden] { display: none; }
+
+      .toc {
+        display: grid;
+        gap: 6px;
+        margin: 20px 0 28px;
+        padding: 16px;
+        border-radius: 8px;
+        background: var(--surface-muted);
+      }
+
+      .toc a { text-decoration: none; }
+
+      h2 {
+        margin: 32px 0 10px;
+        font-size: 1.32rem;
+        line-height: 1.25;
+      }
+
+      h2:first-child { margin-top: 0; }
+
+      p { margin: 0 0 14px; }
+
+      ul { margin: 8px 0 18px; padding-left: 22px; }
+
+      li { margin: 6px 0; }
+
+      .notice {
+        margin: 20px 0;
+        padding: 16px;
+        border-left: 4px solid var(--primary);
+        border-radius: 8px;
+        background: var(--surface-muted);
+        color: var(--muted);
+        font-weight: 650;
+      }
+
+      .footer {
+        margin-top: 20px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        text-align: center;
+      }
+
+      @media (max-width: 680px) {
+        .page { width: min(100% - 20px, 980px); padding-top: 16px; }
+        .hero, .content { padding: 18px; }
+        .brand { align-items: flex-start; flex-direction: column; }
+        .language-switcher { width: 100%; }
+        .language-switcher button { min-width: 0; }
+        .meta-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="brand">
+          <div>
+            <p class="eyebrow">Neatly: Subscriptions &amp; Bills</p>
+            <h1 class="brand-name" data-i18n-en="Privacy Policy" data-i18n-uk="Політика конфіденційності">Privacy Policy</h1>
+          </div>
+          <div class="language-switcher" aria-label="Language selector">
+            <button id="lang-en" type="button" aria-pressed="true">English</button>
+            <button id="lang-uk" type="button" aria-pressed="false">Українська</button>
+          </div>
+        </div>
+        <p class="subtitle" data-i18n-en="English is shown by default. Use the switcher to read the Ukrainian version of the same policy." data-i18n-uk="За замовчуванням відкривається англійська версія. Перемикач дозволяє прочитати цю саму політику українською.">English is shown by default. Use the switcher to read the Ukrainian version of the same policy.</p>
+        <div class="meta-grid" aria-label="Policy metadata">
+          <div class="meta-card">
+            <span class="meta-label" data-i18n-en="Effective date" data-i18n-uk="Дата набрання чинності">Effective date</span>
+            <span class="meta-value" data-i18n-en="May 31, 2026" data-i18n-uk="31 травня 2026 року">May 31, 2026</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label" data-i18n-en="Developer" data-i18n-uk="Розробник">Developer</span>
+            <span class="meta-value">Serhii_Chornei</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label" data-i18n-en="Contact" data-i18n-uk="Контакт">Contact</span>
+            <span class="meta-value"><a href="mailto:neatly.app-help@outlook.com">neatly.app-help@outlook.com</a></span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label" data-i18n-en="Android package" data-i18n-uk="Android package">Android package</span>
+            <span class="meta-value">com.neatly.subscriptions</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <article id="policy-en" class="policy" lang="en">
+          <p>This Privacy Policy explains how Neatly handles data when you use the app.</p>
+          <p>Neatly is a local-first app for tracking subscriptions, recurring payments, trial periods, reminders, and related expense information. The app is designed to work without a user account, without bank connection, and without server synchronization of your payment records.</p>
+          <p>This policy applies to the Android application published under the brand name <strong>Neatly</strong> and the store title <strong>Neatly: Subscriptions &amp; Bills</strong>.</p>
+
+          <nav class="toc" aria-label="Privacy Policy sections">
+            <a href="#en-device-data">1. Data stored on your device</a>
+            <a href="#en-no-account">2. No account</a>
+            <a href="#en-analytics">3. Analytics and diagnostics</a>
+            <a href="#en-rates">4. Exchange rates</a>
+            <a href="#en-notifications">5. Notifications and reminders</a>
+            <a href="#en-backup">6. Backup, export, and import</a>
+            <a href="#en-support">7. Support requests</a>
+            <a href="#en-sharing">8. Data sharing</a>
+            <a href="#en-retention">9. Data retention and deletion</a>
+            <a href="#en-security">10. Security</a>
+            <a href="#en-children">11. Children's privacy</a>
+            <a href="#en-contact">12. Contact</a>
+          </nav>
+
+          <h2 id="en-device-data">1. Data stored on your device</h2>
+          <p>Neatly lets you manually create and manage records such as:</p>
+          <ul>
+            <li>payment, subscription, service, or recurring expense names;</li>
+            <li>amounts, currencies, billing cycles, due dates, categories, notes, payment links, and payment methods;</li>
+            <li>trial period information and reminder settings;</li>
+            <li>app settings;</li>
+            <li>local backup/export files created by you.</li>
+          </ul>
+          <p>These records are stored on your device. Neatly does not send your payment records to our server.</p>
+          <p>Neatly does not access your bank account, bank card transactions, financial institution account, or payment provider account. The app does not automatically scan your transactions. Any payment, subscription, trial, or recurring expense record is added or edited manually by you.</p>
+
+          <h2 id="en-no-account">2. No account</h2>
+          <p>Neatly does not require you to create an account.</p>
+          <p>Because there is no account system, we do not collect account login information, passwords, profile photos, account names, or account-based identifiers through the app.</p>
+
+          <h2 id="en-analytics">3. Analytics and diagnostics</h2>
+          <p>Neatly may send limited, de-identified technical information only if you choose to enable analytics in the app. Analytics is disabled by default.</p>
+          <p>This information helps us find errors, check the stability of core features, understand whether important app flows work correctly, and improve the app.</p>
+          <p>The analytics and diagnostics providers are <strong>Google Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>.</p>
+          <p>Analytics may include technical or aggregated information such as:</p>
+          <ul>
+            <li>app language and theme setting;</li>
+            <li>onboarding step or screen/action names;</li>
+            <li>approximate record count range, such as 0, 1-5, 6-20, or 20+ records;</li>
+            <li>whether reminders are enabled;</li>
+            <li>notification permission status;</li>
+            <li>billing cycle type, such as monthly, yearly, weekly, or custom;</li>
+            <li>technical error codes, app version, device model, operating system version, and crash diagnostics.</li>
+          </ul>
+          <p>We do not send:</p>
+          <ul>
+            <li>payment names, subscription names, service names, or recurring expense names;</li>
+            <li>amounts, due dates, notes, payment links, or payment methods;</li>
+            <li>full lists of records;</li>
+            <li>backup files;</li>
+            <li>contents of the local database.</li>
+          </ul>
+          <p>You can disable analytics at any time in the app settings. When analytics is disabled, Neatly is configured not to send analytics events or crash reports.</p>
+          <p>Neatly does not use analytics for advertising, ad targeting, or user profiling.</p>
+
+          <h2 id="en-rates">4. Exchange rates</h2>
+          <p>Neatly may load public exchange rate data, including from the National Bank of Ukraine or another official public data source, to support currency-related features.</p>
+          <p>Your payment records, payment names, amounts, notes, due dates, payment links, payment methods, backup files, local database contents, and full record list are not sent with this request.</p>
+
+          <h2 id="en-notifications">5. Notifications and reminders</h2>
+          <p>Neatly may ask for notification permission to send reminders about upcoming payments, trial periods, or recurring expenses.</p>
+          <p>Reminder information is stored locally on your device. Notifications are created to help you remember dates that you added to the app.</p>
+          <p>Neatly may also use device-level permissions needed to schedule or restore reminders after device restart. These permissions are used only to support reminder functionality.</p>
+
+          <h2 id="en-backup">6. Backup, export, and import</h2>
+          <p>Neatly may allow you to export or import your data manually.</p>
+          <p>When you create an export or backup file, you decide where to store or share it.</p>
+          <p>Neatly does not automatically upload your backup files to our server. We do not receive the contents of your backup files unless you choose to send them to us, for example when contacting support.</p>
+          <p>Device-level backup services controlled by your operating system or account provider may operate separately from Neatly depending on your device settings.</p>
+
+          <h2 id="en-support">7. Support requests</h2>
+          <p>If you contact us by email, we may receive the information you choose to include in your message.</p>
+          <p>A support request may include your email address, your message, screenshots or files you decide to attach, app version, device model, operating system version, language setting, and technical details needed to understand the issue.</p>
+          <p>Please avoid sending payment names, amounts, due dates, notes, payment links, backup files, or other private financial information unless it is necessary for your support request.</p>
+          <p>We use support request information only to answer your message, investigate issues, improve the app, and maintain support records.</p>
+
+          <h2 id="en-sharing">8. Data sharing</h2>
+          <p>Neatly does not sell your personal data.</p>
+          <p>We may share or process limited data only in these cases:</p>
+          <ul>
+            <li>if you enable analytics, de-identified technical information may be processed by Google Firebase Analytics and Firebase Crashlytics;</li>
+            <li>if you contact support, your email and message may be processed by our email provider;</li>
+            <li>if required by law, regulation, legal process, or enforceable governmental request.</li>
+          </ul>
+          <p>We do not share your payment records, backup files, or local database contents with advertisers, analytics providers, or other third parties.</p>
+
+          <h2 id="en-retention">9. Data retention and deletion</h2>
+          <p>Your payment records are stored locally on your device until you delete them, export them, clear app data, or uninstall the app.</p>
+          <p>You can delete records inside the app. You can also remove app data using your device settings.</p>
+          <p>If analytics is enabled, de-identified technical analytics and diagnostics data may be retained by Google according to Firebase retention settings. We aim to keep analytics data limited to what is needed for diagnostics, stability, and product improvement.</p>
+          <p>Support emails may be retained for as long as needed to respond to your request, keep support history, prevent abuse, or comply with legal obligations.</p>
+
+          <h2 id="en-security">10. Security</h2>
+          <p>Neatly is designed to reduce data exposure by storing payment records locally and by not requiring an account or bank connection.</p>
+          <p>However, no device, app, storage method, or electronic transmission is completely secure. You are responsible for protecting your device with appropriate security settings, such as screen lock, operating system updates, and careful handling of exported backup files.</p>
+
+          <h2 id="en-children">11. Children's privacy</h2>
+          <p>Neatly is not designed for children under 13.</p>
+          <p>We do not knowingly collect personal information from children under 13. If you believe that a child has provided us with personal information through a support request or other channel, contact us and we will review and delete the information where appropriate.</p>
+
+          <h2 id="en-international">12. International users</h2>
+          <p>If you contact us or enable analytics, limited technical or support-related information may be processed in countries other than your country of residence. This depends on the email provider, analytics provider, hosting provider, or other service providers used to operate and support the app.</p>
+
+          <h2 id="en-changes">13. Changes to this Privacy Policy</h2>
+          <p>We may update this Privacy Policy from time to time.</p>
+          <p>If we add features that materially change how data is handled, such as advertising, new analytics, account functionality, cloud synchronization, or third-party data processing, we will update this Privacy Policy and, where required, the Google Play Data Safety section before or together with the release of that version.</p>
+          <p>The updated version will be posted at the same Privacy Policy URL with a new effective date.</p>
+
+          <h2 id="en-contact">14. Contact</h2>
+          <p>If you have questions about this Privacy Policy or how Neatly handles data, contact us at <a href="mailto:neatly.app-help@outlook.com">neatly.app-help@outlook.com</a>.</p>
+
+          <p class="notice">This page is provided for transparency about Neatly's data practices and should be reviewed before publication in Google Play.</p>
+        </article>
+
+        <article id="policy-uk" class="policy" lang="uk" hidden>
+          <p>Ця Політика конфіденційності пояснює, як Neatly працює з даними під час використання застосунку.</p>
+          <p>Neatly — це local-first застосунок для відстеження підписок, регулярних платежів, пробних періодів, нагадувань і пов'язаної інформації про витрати. Застосунок працює без акаунта, без банківського підключення та без серверної синхронізації записів користувача.</p>
+          <p>Ця політика застосовується до Android-застосунку, який публікується під брендом <strong>Neatly</strong> і store title <strong>Neatly: Subscriptions &amp; Bills</strong>.</p>
+
+          <nav class="toc" aria-label="Розділи Політики конфіденційності">
+            <a href="#uk-device-data">1. Дані, що зберігаються на пристрої</a>
+            <a href="#uk-no-account">2. Без акаунта</a>
+            <a href="#uk-analytics">3. Аналітика та діагностика</a>
+            <a href="#uk-rates">4. Курси валют</a>
+            <a href="#uk-notifications">5. Сповіщення та нагадування</a>
+            <a href="#uk-backup">6. Backup, export та import</a>
+            <a href="#uk-support">7. Звернення до підтримки</a>
+            <a href="#uk-sharing">8. Передача даних</a>
+            <a href="#uk-retention">9. Зберігання та видалення даних</a>
+            <a href="#uk-security">10. Безпека</a>
+            <a href="#uk-children">11. Конфіденційність дітей</a>
+            <a href="#uk-contact">12. Контакти</a>
+          </nav>
+
+          <h2 id="uk-device-data">1. Дані, що зберігаються на пристрої</h2>
+          <p>Neatly дозволяє вручну створювати й керувати такими записами:</p>
+          <ul>
+            <li>назви платежів, підписок, сервісів або регулярних витрат;</li>
+            <li>суми, валюти, платіжні цикли, дати, категорії, нотатки, посилання на оплату та способи оплати;</li>
+            <li>інформація про пробні періоди та налаштування нагадувань;</li>
+            <li>налаштування застосунку;</li>
+            <li>локальні backup/export-файли, які створює користувач.</li>
+          </ul>
+          <p>Ці записи зберігаються на вашому пристрої. Neatly не надсилає ваші записи про платежі на наш сервер.</p>
+          <p>Neatly не має доступу до вашого банківського рахунку, банківських карток, транзакцій, фінансових установ або платіжних сервісів. Застосунок не сканує транзакції автоматично. Будь-який запис про платіж, підписку, пробний період або регулярну витрату додається чи редагується вами вручну.</p>
+
+          <h2 id="uk-no-account">2. Без акаунта</h2>
+          <p>Neatly не вимагає створення акаунта.</p>
+          <p>Оскільки в застосунку немає системи акаунтів, ми не збираємо логіни, паролі, фото профілю, імена акаунтів або account-based identifiers через застосунок.</p>
+
+          <h2 id="uk-analytics">3. Аналітика та діагностика</h2>
+          <p>Neatly може надсилати обмежену знеособлену технічну інформацію лише якщо ви самостійно увімкнули аналітику в застосунку. Аналітика вимкнена за замовчуванням.</p>
+          <p>Ця інформація допомагає знаходити помилки, перевіряти стабільність основних функцій, розуміти, чи коректно працюють важливі сценарії застосунку, і покращувати продукт.</p>
+          <p>Постачальники аналітики та діагностики: <strong>Google Firebase Analytics</strong> і <strong>Firebase Crashlytics</strong>.</p>
+          <p>Аналітика може включати технічну або агреговану інформацію, наприклад:</p>
+          <ul>
+            <li>мову застосунку та тему інтерфейсу;</li>
+            <li>крок онбордингу або назви екранів/дій;</li>
+            <li>приблизний діапазон кількості записів, наприклад 0, 1-5, 6-20 або 20+ записів;</li>
+            <li>чи увімкнені нагадування;</li>
+            <li>статус дозволу на сповіщення;</li>
+            <li>тип платіжного циклу, наприклад щомісячний, щорічний, щотижневий або власний;</li>
+            <li>технічні коди помилок, версію застосунку, модель пристрою, версію операційної системи та crash diagnostics.</li>
+          </ul>
+          <p>Ми не надсилаємо:</p>
+          <ul>
+            <li>назви платежів, підписок, сервісів або регулярних витрат;</li>
+            <li>суми, дати, нотатки, посилання на оплату або способи оплати;</li>
+            <li>повний список записів;</li>
+            <li>backup-файли;</li>
+            <li>вміст локальної бази даних.</li>
+          </ul>
+          <p>Ви можете вимкнути аналітику будь-коли в налаштуваннях застосунку. Коли аналітика вимкнена, Neatly налаштований так, щоб не надсилати analytics events або crash reports.</p>
+          <p>Neatly не використовує аналітику для реклами, рекламного таргетингу або профілювання користувачів.</p>
+
+          <h2 id="uk-rates">4. Курси валют</h2>
+          <p>Neatly може завантажувати публічні дані про курси валют, зокрема від Національного банку України або іншого офіційного відкритого джерела, для роботи функцій, пов'язаних із валютами.</p>
+          <p>Ваші записи про платежі, назви платежів, суми, нотатки, дати, посилання на оплату, способи оплати, backup-файли, вміст локальної бази та повний список записів не надсилаються разом із таким запитом.</p>
+
+          <h2 id="uk-notifications">5. Сповіщення та нагадування</h2>
+          <p>Neatly може попросити дозвіл на сповіщення, щоб надсилати нагадування про майбутні платежі, пробні періоди або регулярні витрати.</p>
+          <p>Інформація для нагадувань зберігається локально на вашому пристрої. Сповіщення створюються, щоб допомогти вам не пропустити дати, які ви самі додали в застосунок.</p>
+          <p>Neatly також може використовувати системні дозволи пристрою, потрібні для планування або відновлення нагадувань після перезапуску пристрою. Ці дозволи використовуються тільки для роботи нагадувань.</p>
+
+          <h2 id="uk-backup">6. Backup, export та import</h2>
+          <p>Neatly може дозволяти вручну експортувати або імпортувати дані.</p>
+          <p>Коли ви створюєте export або backup-файл, ви самі вирішуєте, де його зберігати або кому його передавати.</p>
+          <p>Neatly не завантажує backup-файли автоматично на наш сервер. Ми не отримуємо вміст backup-файлів, якщо ви самі не надішлете їх нам, наприклад під час звернення в підтримку.</p>
+          <p>Системні backup-сервіси операційної системи або акаунта пристрою можуть працювати окремо від Neatly залежно від налаштувань вашого пристрою.</p>
+
+          <h2 id="uk-support">7. Звернення до підтримки</h2>
+          <p>Якщо ви звертаєтеся до нас email-повідомленням, ми можемо отримати інформацію, яку ви самі додали до звернення.</p>
+          <p>Звернення до підтримки може містити вашу email-адресу, текст повідомлення, скріншоти або файли, які ви вирішили прикріпити, версію застосунку, модель пристрою, версію операційної системи, мовні налаштування та технічні деталі, потрібні для розуміння проблеми.</p>
+          <p>Будь ласка, не надсилайте назви платежів, суми, дати, нотатки, посилання на оплату, backup-файли або іншу приватну фінансову інформацію, якщо це не потрібно для вирішення вашого звернення.</p>
+          <p>Ми використовуємо інформацію зі звернень до підтримки тільки для відповіді на ваше повідомлення, розслідування проблем, покращення застосунку та ведення історії підтримки.</p>
+
+          <h2 id="uk-sharing">8. Передача даних</h2>
+          <p>Neatly не продає ваші персональні дані.</p>
+          <p>Ми можемо передавати або обробляти обмежені дані лише в таких випадках:</p>
+          <ul>
+            <li>якщо ви увімкнули аналітику, знеособлена технічна інформація може оброблятися Google Firebase Analytics і Firebase Crashlytics;</li>
+            <li>якщо ви звертаєтеся до підтримки, ваш email і повідомлення можуть оброблятися нашим email-провайдером;</li>
+            <li>якщо це потрібно за законом, нормативною вимогою, юридичним процесом або обов'язковим запитом державного органу.</li>
+          </ul>
+          <p>Ми не передаємо рекламодавцям, постачальникам аналітики або іншим третім сторонам ваші записи про платежі, backup-файли або вміст локальної бази даних.</p>
+
+          <h2 id="uk-retention">9. Зберігання та видалення даних</h2>
+          <p>Ваші записи про платежі зберігаються локально на вашому пристрої, доки ви їх не видалите, не експортуєте, не очистите дані застосунку або не видалите застосунок.</p>
+          <p>Ви можете видаляти записи всередині застосунку. Ви також можете видалити дані застосунку через налаштування пристрою.</p>
+          <p>Якщо аналітика увімкнена, знеособлені технічні analytics і diagnostics дані можуть зберігатися Google відповідно до налаштувань Firebase. Ми прагнемо обмежувати аналітику даними, потрібними для діагностики, стабільності та покращення продукту.</p>
+          <p>Email-звернення до підтримки можуть зберігатися стільки, скільки потрібно для відповіді на звернення, збереження історії підтримки, запобігання зловживанням або виконання юридичних обов'язків.</p>
+
+          <h2 id="uk-security">10. Безпека</h2>
+          <p>Neatly зменшує ризик зайвого доступу до даних завдяки локальному зберіганню записів, відсутності акаунта та відсутності банківського підключення.</p>
+          <p>Водночас жоден пристрій, застосунок, спосіб зберігання або електронна передача даних не є повністю захищеними. Ви відповідаєте за захист свого пристрою: блокування екрана, оновлення операційної системи та обережне поводження з export/backup-файлами.</p>
+
+          <h2 id="uk-children">11. Конфіденційність дітей</h2>
+          <p>Neatly не призначений для дітей віком до 13 років.</p>
+          <p>Ми свідомо не збираємо персональну інформацію дітей віком до 13 років. Якщо ви вважаєте, що дитина надала нам персональну інформацію через звернення до підтримки або інший канал, зв'яжіться з нами, і ми перевіримо та видалимо таку інформацію, якщо це доречно.</p>
+
+          <h2 id="uk-international">12. Міжнародні користувачі</h2>
+          <p>Якщо ви звертаєтеся до нас або вмикаєте аналітику, обмежена технічна або support-інформація може оброблятися в країнах, відмінних від країни вашого проживання. Це залежить від email-провайдера, постачальника аналітики, hosting provider або інших сервісів, які використовуються для роботи й підтримки застосунку.</p>
+
+          <h2 id="uk-changes">13. Зміни до цієї Політики конфіденційності</h2>
+          <p>Ми можемо час від часу оновлювати цю Політику конфіденційності.</p>
+          <p>Якщо ми додамо функції, які суттєво змінюють обробку даних, наприклад рекламу, нову аналітику, акаунти, хмарну синхронізацію або нову сторонню обробку даних, ми оновимо цю Політику конфіденційності та, якщо потрібно, розділ Google Play Data Safety до або разом із релізом такої версії.</p>
+          <p>Оновлена версія буде розміщена за тим самим URL Політики конфіденційності з новою датою набрання чинності.</p>
+
+          <h2 id="uk-contact">14. Контакти</h2>
+          <p>Якщо у вас є запитання щодо цієї Політики конфіденційності або того, як Neatly працює з даними, напишіть нам на <a href="mailto:neatly.app-help@outlook.com">neatly.app-help@outlook.com</a>.</p>
+
+          <p class="notice">Ця сторінка підготовлена для прозорого пояснення роботи Neatly з даними та має бути перевірена перед публікацією в Google Play.</p>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026 Serhii_Chornei. Neatly is a local-first Android app.</p>
+      </footer>
+    </main>
+
+    <script>
+      const buttons = {
+        en: document.getElementById("lang-en"),
+        uk: document.getElementById("lang-uk")
+      };
+      const policies = {
+        en: document.getElementById("policy-en"),
+        uk: document.getElementById("policy-uk")
+      };
+      const translated = document.querySelectorAll("[data-i18n-en][data-i18n-uk]");
+
+      function setLanguage(language, updateHash = true) {
+        const nextLanguage = language === "uk" ? "uk" : "en";
+        const inactiveLanguage = nextLanguage === "en" ? "uk" : "en";
+
+        policies[nextLanguage].hidden = false;
+        policies[inactiveLanguage].hidden = true;
+        buttons[nextLanguage].setAttribute("aria-pressed", "true");
+        buttons[inactiveLanguage].setAttribute("aria-pressed", "false");
+        document.documentElement.lang = nextLanguage;
+
+        translated.forEach((node) => {
+          node.textContent = node.dataset[`i18n${nextLanguage === "en" ? "En" : "Uk"}`];
+        });
+
+        if (updateHash) {
+          const url = new URL(window.location.href);
+          url.searchParams.set("lang", nextLanguage);
+          window.history.replaceState({}, "", url);
+        }
+      }
+
+      buttons.en.addEventListener("click", () => setLanguage("en"));
+      buttons.uk.addEventListener("click", () => setLanguage("uk"));
+
+      const initialLanguage = new URL(window.location.href).searchParams.get("lang") === "uk" ? "uk" : "en";
+      setLanguage(initialLanguage, false);
+    </script>
+  </body>
+</html>
