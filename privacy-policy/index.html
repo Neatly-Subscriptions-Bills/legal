@@ -2,14 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script>(function(){var t=localStorage.getItem('neatly-legal-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Privacy Policy for Neatly: Subscriptions &amp; Bills." />
     <title>Privacy Policy | Neatly</title>
     <link rel="canonical" href="https://neatly-subscriptions-bills.github.io/legal/privacy-policy/">
     <link rel="alternate" hreflang="en" href="https://neatly-subscriptions-bills.github.io/legal/privacy-policy/">
     <link rel="alternate" hreflang="uk" href="https://neatly-subscriptions-bills.github.io/legal/privacy-policy/uk/">
+    <link rel="alternate" hreflang="x-default" href="https://neatly-subscriptions-bills.github.io/legal/privacy-policy/">
     <style>
       :root {
+        color-scheme: light dark;
         --bg: #f6f8f8;
         --surface: #ffffff;
         --surface-muted: #eef3f3;
@@ -17,6 +20,35 @@
         --muted: #536666;
         --border: #dde7e7;
         --primary: #008080;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]):not([data-theme="dark"]) {
+          --bg: #08111f;
+          --surface: #0d1c2f;
+          --surface-muted: #091526;
+          --text: #ddeaea;
+          --muted: #7aabab;
+          --border: #1b3348;
+        }
+      }
+
+      [data-theme="dark"] {
+        --bg: #08111f;
+        --surface: #0d1c2f;
+        --surface-muted: #091526;
+        --text: #ddeaea;
+        --muted: #7aabab;
+        --border: #1b3348;
+      }
+
+      [data-theme="light"] {
+        --bg: #f6f8f8;
+        --surface: #ffffff;
+        --surface-muted: #eef3f3;
+        --text: #102222;
+        --muted: #536666;
+        --border: #dde7e7;
       }
 
       * { box-sizing: border-box; }
@@ -63,6 +95,42 @@
         text-transform: uppercase;
       }
 
+      .topline-controls {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+
+      .theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--surface-muted);
+        color: var(--muted);
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: color 0.15s, border-color 0.15s, background 0.15s;
+      }
+
+      .theme-toggle:hover {
+        color: var(--primary);
+        border-color: var(--primary);
+        background: var(--surface);
+      }
+
+      .theme-toggle:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 2px;
+      }
+
+      .theme-toggle svg { display: block; pointer-events: none; }
+
       .language-switcher {
         display: inline-flex;
         align-items: center;
@@ -85,13 +153,8 @@
         text-decoration: none;
       }
 
-      .language-switcher a {
-        cursor: pointer;
-      }
-
-      .language-switcher a:hover {
-        color: var(--primary);
-      }
+      .language-switcher a { cursor: pointer; }
+      .language-switcher a:hover { color: var(--primary); }
 
       .language-switcher .active-lang {
         color: var(--primary);
@@ -170,10 +233,13 @@
       <header class="hero">
         <div class="topline">
           <p class="eyebrow">Neatly: Subscriptions &amp; Bills</p>
-          <div class="language-switcher" aria-label="Language selector">
-            <span class="active-lang">English</span>
-            <span class="language-divider" aria-hidden="true">/</span>
-            <a href="./uk/" id="lang-uk">Українська</a>
+          <div class="topline-controls">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Theme: Auto"></button>
+            <div class="language-switcher" aria-label="Language selector">
+              <span class="active-lang">EN</span>
+              <span class="language-divider" aria-hidden="true">/</span>
+              <a href="./uk/index.html" id="lang-uk">UA</a>
+            </div>
           </div>
         </div>
         <h1 class="brand-name">Privacy Policy</h1>
@@ -189,12 +255,12 @@
           <nav class="toc" aria-label="Privacy Policy sections">
             <a href="#en-device-data">1. Data stored on your device</a>
             <a href="#en-no-account">2. No account</a>
-            <a href="#en-analytics">3. Analytics and diagnostics</a>
-            <a href="#en-rates">4. Exchange rates</a>
-            <a href="#en-notifications">5. Notifications and reminders</a>
-            <a href="#en-backup">6. Backup, export, and import</a>
-            <a href="#en-support">7. Support requests</a>
-            <a href="#en-sharing">8. Data sharing</a>
+            <a href="#en-rates">3. Exchange rates</a>
+            <a href="#en-notifications">4. Notifications and reminders</a>
+            <a href="#en-backup">5. Backup, export, and import</a>
+            <a href="#en-support">6. Support requests</a>
+            <a href="#en-sharing">7. Third-party services</a>
+            <a href="#en-analytics">8. Optional analytics and diagnostics</a>
             <a href="#en-retention">9. Data retention and deletion</a>
             <a href="#en-choices">10. Your choices</a>
             <a href="#en-privacy-rights">11. Privacy rights</a>
@@ -216,68 +282,80 @@
           </ul>
           <p>These records are stored on your device. Neatly does not send your payment records to our server.</p>
           <p>Neatly does not access your bank account, bank card transactions, financial institution account, or payment provider account. The app does not automatically scan your transactions. Any payment, subscription, trial, or recurring expense record is added or edited manually by you.</p>
+          <p>Neatly version 1.0 does not include active Plus/Pro purchases or subscription billing services. Core tracking features are available locally on your device.</p>
 
           <h2 id="en-no-account">2. No account</h2>
           <p>Neatly does not require you to create an account.</p>
           <p>Because there is no account system, we do not collect account login information, passwords, profile photos, account names, or account-based identifiers through the app.</p>
 
-          <h2 id="en-analytics">3. Analytics and diagnostics</h2>
-          <p>Neatly may send limited technical and diagnostic information that does not include your payment records, payment names, amounts, notes, due dates, payment links, payment methods, backup files, or local database contents. Analytics is disabled by default.</p>
-          <p>This information helps us find errors, check the stability of core features, understand whether important app flows work correctly, and improve the app.</p>
-          <p>The analytics and diagnostics providers are <strong>Google Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>.</p>
-          <p>Analytics may include technical or aggregated information such as:</p>
-          <ul>
-            <li>app language and theme setting;</li>
-            <li>onboarding step or screen/action names;</li>
-            <li>approximate record count range, such as 0, 1-5, 6-20, or 20+ records;</li>
-            <li>whether reminders are enabled;</li>
-            <li>notification permission status;</li>
-            <li>billing cycle type, such as monthly, yearly, weekly, or custom;</li>
-            <li>technical error codes, app version, device model, operating system version, and crash diagnostics.</li>
-          </ul>
-          <p>We do not send:</p>
-          <ul>
-            <li>payment names, subscription names, service names, or recurring expense names;</li>
-            <li>amounts, due dates, notes, payment links, or payment methods;</li>
-            <li>full lists of records;</li>
-            <li>backup files;</li>
-            <li>contents of the local database.</li>
-          </ul>
-          <p>We do not intentionally include information that directly identifies your payment records or financial content in analytics or crash reports.</p>
-          <p>Firebase may generate or use technical installation identifiers needed to provide analytics and crash reporting services. Neatly does not use these identifiers to access or identify your payment records or financial content.</p>
-          <p>You can disable analytics at any time in the app settings. When analytics is disabled, Neatly is configured not to send analytics events or crash reports.</p>
-          <p>Neatly does not use analytics for advertising, ad targeting, or user profiling.</p>
-
-          <h2 id="en-rates">4. Exchange rates</h2>
+          <h2 id="en-rates">3. Exchange rates</h2>
           <p>Neatly may load public exchange rate data, including from the National Bank of Ukraine or another official public data source, to support currency-related features.</p>
           <p>Your payment records, payment names, amounts, notes, due dates, payment links, payment methods, backup files, local database contents, and full record list are not sent with this request.</p>
 
-          <h2 id="en-notifications">5. Notifications and reminders</h2>
+          <h2 id="en-notifications">4. Notifications and reminders</h2>
           <p>Neatly may ask for notification permission to send reminders about upcoming payments, trial periods, or recurring expenses.</p>
           <p>Reminder information is stored locally on your device. Notifications are created to help you remember dates that you added to the app.</p>
           <p>Neatly may also use device-level permissions needed to schedule or restore reminders after device restart. These permissions are used only to support reminder functionality.</p>
 
-          <h2 id="en-backup">6. Backup, export, and import</h2>
+          <h2 id="en-backup">5. Backup, export, and import</h2>
           <p>Neatly may allow you to export or import your data manually.</p>
           <p>When you create an export or backup file, you decide where to store or share it.</p>
           <p>Neatly does not automatically upload your backup files to our server. We do not receive the contents of your backup files unless you choose to send them to us, for example when contacting support.</p>
           <p>Device-level backup services controlled by your operating system or account provider may operate separately from Neatly depending on your device settings.</p>
 
-          <h2 id="en-support">7. Support requests</h2>
+          <h2 id="en-support">6. Support requests</h2>
           <p>If you contact us by email, we may receive the information you choose to include in your message.</p>
           <p>A support request may include your email address, your message, screenshots or files you decide to attach, app version, device model, operating system version, language setting, and technical details needed to understand the issue.</p>
           <p>Please avoid sending payment names, amounts, due dates, notes, payment links, backup files, or other private financial information unless it is necessary for your support request.</p>
           <p>We use support request information only to answer your message, investigate issues, improve the app, and maintain support records.</p>
 
-          <h2 id="en-sharing">8. Data sharing</h2>
-          <p>Neatly does not sell your personal data.</p>
-          <p>We may share or process limited data only in these cases:</p>
+          <h2 id="en-sharing">7. Third-party services</h2>
+          <p>Neatly may use third-party services for app distribution, optional analytics, diagnostics, and app stability monitoring.</p>
+          <p><strong>Not sent:</strong> Neatly does not send the content of your payment records, backup files, export files, import files, or local database content to these services.</p>
+          <p>Neatly does not request access to GPS, precise location, or background location. Neatly does not send precise location data, GPS data, or background location data to third-party services.</p>
+          <p>Third-party services may process limited technical information if optional analytics or diagnostics are enabled. These services may include:</p>
           <ul>
-            <li>if you enable analytics, limited technical and diagnostic information may be processed by Google Firebase Analytics and Firebase Crashlytics;</li>
-            <li>if you contact support, your email and message may be processed by our email provider;</li>
-            <li>if required by law, regulation, legal process, or enforceable governmental request.</li>
+            <li>Google Play services;</li>
+            <li>Google Analytics for Firebase;</li>
+            <li>Firebase Crashlytics, if crash reporting is enabled.</li>
           </ul>
-          <p>We do not share your payment records, backup files, or local database contents with advertisers, analytics providers, or other third parties.</p>
+          <p>If optional analytics is enabled, the analytics provider may derive an approximate region from technical network data, such as an IP address. This is used for aggregated analytics and diagnostics, not to track your precise location.</p>
+          <p>These services process data according to their own privacy practices.</p>
+          <p>Advertising is not used in Neatly version 1.0. Advertising may be added in a future version only after this Privacy Policy and the Google Play Data Safety section are updated.</p>
+
+          <h2 id="en-analytics">8. Optional analytics and diagnostics</h2>
+          <p>Analytics is disabled by default. You can use Neatly without enabling analytics.</p>
+          <p><strong>Not sent:</strong> Neatly does not send your personal payment records to Neatly servers, analytics services, or third-party analytics providers. This includes:</p>
+          <ul>
+            <li>subscription names;</li>
+            <li>bill names;</li>
+            <li>amounts;</li>
+            <li>due dates;</li>
+            <li>notes;</li>
+            <li>links;</li>
+            <li>payment methods;</li>
+            <li>custom record details;</li>
+            <li>custom categories created by you;</li>
+            <li>backup files;</li>
+            <li>export files;</li>
+            <li>import files;</li>
+            <li>the full list of your records;</li>
+            <li>the content of your local database.</li>
+          </ul>
+          <p>This information stays on your device unless you choose to export, back up, or share it yourself.</p>
+          <p>If you enable optional analytics in the app settings, Neatly may send limited technical information to help improve app stability, understand general feature usage, and detect technical problems.</p>
+          <p>This technical information may include:</p>
+          <ul>
+            <li>app interactions;</li>
+            <li>app version;</li>
+            <li>device model;</li>
+            <li>operating system version;</li>
+            <li>diagnostics;</li>
+            <li>crash logs, if crash reporting is enabled;</li>
+            <li>approximate region derived from technical network data, such as IP address;</li>
+            <li>device or app identifiers used by analytics or diagnostics services.</li>
+          </ul>
+          <p>Optional analytics does not include the content of your records. You can turn analytics off at any time in the app settings. Disabling analytics does not affect the core functionality of the app.</p>
 
           <h2 id="en-retention">9. Data retention and deletion</h2>
           <p>Your payment records are stored locally on your device until you delete them, export them, clear app data, or uninstall the app.</p>
@@ -286,10 +364,11 @@
           <p>Support emails may be retained for as long as needed to respond to your request, keep support history, prevent abuse, or comply with legal obligations.</p>
 
           <h2 id="en-choices">10. Your choices</h2>
-          <p>You can:</p>
+          <p>You can use Neatly without enabling analytics.</p>
+          <p>Optional analytics is disabled by default. You can enable or disable it in the app settings at any time. Disabling analytics does not affect the core functionality of the app.</p>
+          <p>You can also:</p>
           <ul>
             <li>create, edit, export, import, or delete your records inside the app;</li>
-            <li>disable analytics at any time in the app settings;</li>
             <li>delete local app data through your device settings;</li>
             <li>choose where to store or share exported backup files;</li>
             <li>contact us to ask about support-related information you previously sent to us.</li>
@@ -328,10 +407,48 @@
     </main>
 
     <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get("lang") === "uk") {
-        window.location.replace("./uk/");
-      }
+      // Legacy ?lang= redirect
+      (function () {
+        var p = new URLSearchParams(window.location.search);
+        if (p.get('lang') === 'uk') { window.location.replace('./uk/index.html'); }
+      })();
+
+      // Theme toggle — cycles Auto → Dark → Light → Auto
+      (function () {
+        var ORDER = ['auto', 'dark', 'light'];
+
+        var ICONS = {
+// Sun + moon with slash = Auto/System theme
+          auto: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.6"/><line x1="7" y1="1.8" x2="7" y2="3"/><line x1="7" y1="11" x2="7" y2="12.2"/><line x1="1.8" y1="7" x2="3" y2="7"/><line x1="11" y1="7" x2="12.2" y2="7"/><line x1="3.3" y1="3.3" x2="4.2" y2="4.2"/><line x1="9.8" y1="9.8" x2="10.7" y2="10.7"/><line x1="3.3" y1="10.7" x2="4.2" y2="9.8"/><line x1="9.8" y1="4.2" x2="10.7" y2="3.3"/><path d="M18.5 13.2A4.8 4.8 0 1 0 20.8 21 6 6 0 0 1 16 15.2a4.8 4.8 0 0 0 2.5-2z"/><line x1="4" y1="20" x2="20" y2="4"/></svg>',
+          // Moon = Dark
+          dark: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+          // Sun = Light
+          light: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
+        };
+
+        var LABELS = { auto: 'Theme: Auto', dark: 'Theme: Dark', light: 'Theme: Light' };
+        var btn = document.getElementById('theme-toggle');
+
+        function applyTheme(theme) {
+          if (theme === 'dark' || theme === 'light') {
+            document.documentElement.setAttribute('data-theme', theme);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.innerHTML = ICONS[theme];
+          btn.setAttribute('aria-label', LABELS[theme]);
+          localStorage.setItem('neatly-legal-theme', theme);
+        }
+
+        var stored = localStorage.getItem('neatly-legal-theme') || 'auto';
+        applyTheme(stored);
+
+        btn.addEventListener('click', function () {
+          var current = localStorage.getItem('neatly-legal-theme') || 'auto';
+          var next = ORDER[(ORDER.indexOf(current) + 1) % ORDER.length];
+          applyTheme(next);
+        });
+      })();
     </script>
   </body>
 </html>
