@@ -5,7 +5,9 @@ Public legal pages for **Neatly: Subscriptions & Bills**.
 ## Pages
 
 - Privacy Policy: https://neatly-subscriptions-bills.github.io/legal/privacy-policy/
-- Ukrainian direct link: https://neatly-subscriptions-bills.github.io/legal/privacy-policy/?lang=uk
+- Privacy Policy (Ukrainian): https://neatly-subscriptions-bills.github.io/legal/privacy-policy/uk/
+- Terms of Use: https://neatly-subscriptions-bills.github.io/legal/terms/
+- Terms of Use (Ukrainian): https://neatly-subscriptions-bills.github.io/legal/terms/uk/
 
 ## GitHub Pages setup
 

@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <script>(function(){var t=localStorage.getItem('neatly-legal-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Умови використання Neatly: підписки й витрати." />
+    <title>Умови використання | Neatly</title>
+    <link rel="canonical" href="https://neatly-subscriptions-bills.github.io/legal/terms/uk/">
+    <link rel="alternate" hreflang="en" href="https://neatly-subscriptions-bills.github.io/legal/terms/">
+    <link rel="alternate" hreflang="uk" href="https://neatly-subscriptions-bills.github.io/legal/terms/uk/">
+    <link rel="alternate" hreflang="x-default" href="https://neatly-subscriptions-bills.github.io/legal/terms/">
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f8f8;
+        --surface: #ffffff;
+        --surface-muted: #eef3f3;
+        --text: #102222;
+        --muted: #536666;
+        --border: #dde7e7;
+        --primary: #008080;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]):not([data-theme="dark"]) {
+          --bg: #08111f;
+          --surface: #0d1c2f;
+          --surface-muted: #091526;
+          --text: #ddeaea;
+          --muted: #7aabab;
+          --border: #1b3348;
+        }
+      }
+
+      [data-theme="dark"] {
+        --bg: #08111f;
+        --surface: #0d1c2f;
+        --surface-muted: #091526;
+        --text: #ddeaea;
+        --muted: #7aabab;
+        --border: #1b3348;
+      }
+
+      [data-theme="light"] {
+        --bg: #f6f8f8;
+        --surface: #ffffff;
+        --surface-muted: #eef3f3;
+        --text: #102222;
+        --muted: #536666;
+        --border: #dde7e7;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.62;
+      }
+
+      a { color: var(--primary); font-weight: 700; }
+
+      .page {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .hero,
+      .content {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+
+      .hero { padding: 28px; }
+      .content { margin-top: 20px; padding: 28px; }
+
+      .topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: var(--primary);
+        font-size: 0.82rem;
+        font-weight: 800;
+      }
+
+      .topline-controls {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+
+      .theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--surface-muted);
+        color: var(--muted);
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: color 0.15s, border-color 0.15s, background 0.15s;
+      }
+
+      .theme-toggle:hover {
+        color: var(--primary);
+        border-color: var(--primary);
+        background: var(--surface);
+      }
+
+      .theme-toggle:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 2px;
+      }
+
+      .theme-toggle svg { display: block; pointer-events: none; }
+
+      .language-switcher {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        color: var(--muted);
+        font-size: 0.86rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .language-switcher a,
+      .language-switcher .active-lang {
+        border: 0;
+        border-radius: 4px;
+        background: transparent;
+        color: var(--muted);
+        font: inherit;
+        min-height: 28px;
+        padding: 2px 7px;
+        text-decoration: none;
+      }
+
+      .language-switcher a { cursor: pointer; }
+      .language-switcher a:hover { color: var(--primary); }
+
+      .language-switcher .active-lang {
+        color: var(--primary);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        font-weight: 700;
+      }
+
+      .language-divider { color: var(--border); }
+
+      .brand-name {
+        margin: 18px 0 0;
+        font-size: clamp(2rem, 6vw, 4rem);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .last-updated {
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: clamp(1.15rem, 3vw, 1.7rem);
+        font-weight: 500;
+      }
+
+      .toc {
+        display: grid;
+        gap: 6px;
+        margin: 20px 0 28px;
+        padding: 16px;
+        border-radius: 8px;
+        background: var(--surface-muted);
+      }
+
+      .toc a { text-decoration: none; }
+
+      h2 {
+        margin: 32px 0 10px;
+        font-size: 1.32rem;
+        line-height: 1.25;
+      }
+
+      h2:first-child { margin-top: 0; }
+      p { margin: 0 0 14px; }
+      ul { margin: 8px 0 18px; padding-left: 22px; }
+      li { margin: 6px 0; }
+
+      .notice {
+        margin: 20px 0;
+        padding: 16px;
+        border-left: 4px solid var(--primary);
+        border-radius: 8px;
+        background: var(--surface-muted);
+        color: var(--muted);
+        font-weight: 650;
+      }
+
+      .footer {
+        margin-top: 20px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        text-align: center;
+      }
+
+      @media (max-width: 680px) {
+        .page { width: min(100% - 20px, 980px); padding-top: 16px; }
+        .hero, .content { padding: 18px; }
+        .topline { align-items: flex-start; }
+        .language-switcher { font-size: 0.82rem; }
+        .brand-name { margin-top: 16px; }
+        .last-updated { font-size: 1.05rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="topline">
+          <p class="eyebrow">Neatly: підписки й витрати</p>
+          <div class="topline-controls">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Тема: Авто"></button>
+            <div class="language-switcher" aria-label="Вибір мови">
+              <a href="../index.html" id="lang-en">EN</a>
+              <span class="language-divider" aria-hidden="true">/</span>
+              <span class="active-lang">UA</span>
+            </div>
+          </div>
+        </div>
+        <h1 class="brand-name">Умови використання</h1>
+        <p class="last-updated">Останнє оновлення: 8 серпня 2026 року</p>
+      </header>
+
+      <section class="content">
+        <article id="terms-uk" class="policy" lang="uk">
+          <p>Ці Умови використання («Умови») регулюють використання вами мобільного застосунку Neatly («Neatly», «застосунок»). Встановлюючи або використовуючи застосунок, ви погоджуєтеся з цими Умовами. Якщо ви не згодні — не використовуйте застосунок.</p>
+          <p>Ці Умови застосовуються до Android-застосунку, опублікованого під брендом <strong>Neatly</strong> і назвою в магазині <strong>Neatly: підписки й витрати</strong>.</p>
+
+          <div class="notice">Ці Умови стосуються того, як ви можете користуватися застосунком. Те, як застосунок працює з вашими даними, описано окремо в <a href="../../privacy-policy/uk/">Політиці конфіденційності</a>.</div>
+
+          <nav class="toc" aria-label="Розділи Умов використання">
+            <a href="#uk-license">1. Ліцензія на використання застосунку</a>
+            <a href="#uk-acceptable-use">2. Допустиме використання</a>
+            <a href="#uk-your-data">3. Ваші дані та конфіденційність</a>
+            <a href="#uk-reminders">4. Нагадування надаються за принципом «наскільки можливо»</a>
+            <a href="#uk-no-advice">5. Не є фінансовою консультацією</a>
+            <a href="#uk-as-is">6. Застосунок надається «як є»</a>
+            <a href="#uk-liability">7. Обмеження відповідальності</a>
+            <a href="#uk-paid">8. Майбутні платні функції</a>
+            <a href="#uk-changes">9. Зміни до цих Умов</a>
+            <a href="#uk-law">10. Застосовне право</a>
+            <a href="#uk-contact">11. Контакти</a>
+          </nav>
+
+          <h2 id="uk-license">1. Ліцензія на використання застосунку</h2>
+          <p>Ми надаємо вам особисту, невиключну, без права передачі, відкличну ліцензію на встановлення й використання Neatly на пристроях, якими ви володієте або керуєте, для власного особистого, некомерційного використання.</p>
+          <p>Усі права на застосунок, зокрема його код, дизайн і назву бренду, залишаються за розробником. Ці Умови не передають вам жодних прав власності на застосунок.</p>
+
+          <h2 id="uk-acceptable-use">2. Допустиме використання</h2>
+          <p>Ви погоджуєтеся не:</p>
+          <ul>
+            <li>копіювати, змінювати, поширювати, продавати або здавати в оренду будь-яку частину застосунку;</li>
+            <li>здійснювати зворотну розробку чи намагатися отримати вихідний код застосунку, окрім випадків, коли таке обмеження заборонене чинним законодавством;</li>
+            <li>використовувати застосунок для незаконних цілей або у спосіб, що може пошкодити, вивести з ладу чи погіршити його роботу;</li>
+            <li>намагатися отримати несанкціонований доступ до будь-яких систем, пов’язаних із застосунком.</li>
+          </ul>
+          <p>Застосунок — це особистий інструмент для відстеження платежів, підписок, пробних періодів і регулярних витрат, які ви вносите вручну. Ви відповідаєте за точність доданої інформації та за рішення, які ухвалюєте на її основі.</p>
+
+          <h2 id="uk-your-data">3. Ваші дані та конфіденційність</h2>
+          <p>Neatly розроблений так, щоб працювати без акаунта, без банківського підключення і без серверної синхронізації ваших записів про платежі. Ваші записи зберігаються на вашому пристрої.</p>
+          <p>Те, як обробляються дані — зокрема локальне зберігання, запити курсів валют, необов’язкова аналітика та звернення до підтримки — повністю описано в <a href="../../privacy-policy/uk/">Політиці конфіденційності</a>, яка є частиною використання застосунку.</p>
+
+          <h2 id="uk-reminders">4. Нагадування надаються за принципом «наскільки можливо»</h2>
+          <p>Neatly може планувати локальні сповіщення, щоб допомогти вам пам’ятати про дати, які ви додали в застосунок. Ці нагадування надаються за принципом «наскільки можливо» і залежать від вашого пристрою та його налаштувань.</p>
+          <p>Фактори пристрою поза нашим контролем — зокрема оптимізація батареї, дозволи на сповіщення, режими «не турбувати», обмеження фонової роботи, перезавантаження пристрою, брак пам’яті та специфічне для виробника керування живленням — можуть затримати або унеможливити появу нагадування.</p>
+          <p>Не покладайтеся на Neatly як на єдине нагадування про важливі чи термінові платежі. Neatly — це особистий помічник з організації, а не платіжний чи білінговий сервіс; він не здійснює платежі за вас.</p>
+
+          <h2 id="uk-no-advice">5. Не є фінансовою консультацією</h2>
+          <p>Neatly допомагає вам фіксувати й упорядковувати власну інформацію про витрати. Він не надає фінансових, бухгалтерських, податкових, інвестиційних чи юридичних консультацій.</p>
+          <p>Будь-які курси валют, суми, зведення чи інші числа, показані в застосунку, наведені лише в загальноінформаційних цілях і можуть бути приблизними або застарілими. Важливі значення варто перевіряти самостійно, перш ніж покладатися на них.</p>
+
+          <h2 id="uk-as-is">6. Застосунок надається «як є»</h2>
+          <p>Застосунок надається «як є» і «як доступно», без жодних гарантій, прямих чи непрямих, зокрема без гарантій придатності для продажу, придатності для певної мети, точності та відсутності порушень прав.</p>
+          <p>Ми не гарантуємо, що застосунок працюватиме безперебійно, без помилок або відповідатиме вашим конкретним вимогам.</p>
+
+          <h2 id="uk-liability">7. Обмеження відповідальності</h2>
+          <p>У максимальному обсязі, дозволеному чинним законодавством, розробник не несе відповідальності за будь-які непрямі, випадкові, спеціальні чи побічні збитки, а також за будь-які втрати, спричинені пропущеними платежами, штрафами за прострочення, некоректними даними, пропущеними чи затриманими нагадуваннями або неможливістю користуватися застосунком.</p>
+          <p>Ніщо в цих Умовах не виключає й не обмежує відповідальності, яку не можна виключити чи обмежити за чинним законодавством.</p>
+
+          <h2 id="uk-paid">8. Майбутні платні функції</h2>
+          <p>Поточна версія Neatly не містить активних покупок або підписної оплати. У майбутній версії може з’явитися платний рівень («Plus»). Якщо це станеться, додаткові умови щодо покупок, цін і повернень буде надано до або разом із тим випуском, а будь-які пов’язані покупки також регулюватимуться умовами магазину застосунків, через який здійснено транзакцію.</p>
+
+          <h2 id="uk-changes">9. Зміни до цих Умов</h2>
+          <p>Ми можемо час від часу оновлювати ці Умови. У такому разі ми розмістимо оновлену версію за тією ж адресою з новою датою набрання чинності. Продовження використання застосунку після оновлення означає вашу згоду з переглянутими Умовами.</p>
+
+          <h2 id="uk-law">10. Застосовне право</h2>
+          <p>Ці Умови регулюються законодавством України, без урахування колізійних норм. Обов’язкові права споживача у вашій країні проживання залишаються незмінними.</p>
+
+          <h2 id="uk-contact">11. Контакти</h2>
+          <p>Розробник: Serhii_Chornei.</p>
+          <p>Якщо у вас є запитання щодо цих Умов, напишіть нам на <a href="mailto:neatly.app-help@outlook.com">neatly.app-help@outlook.com</a>.</p>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2026 Neatly: підписки й витрати</p>
+      </footer>
+    </main>
+
+    <script>
+      // Legacy ?lang= redirect
+      (function () {
+        var p = new URLSearchParams(window.location.search);
+        if (p.get('lang') === 'en') { window.location.replace('../index.html'); }
+      })();
+
+      // Theme toggle — cycles Auto → Dark → Light → Auto
+      (function () {
+        var ORDER = ['auto', 'dark', 'light'];
+
+        var ICONS = {
+// Sun + moon with slash = Auto/System theme
+          auto: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.6"/><line x1="7" y1="1.8" x2="7" y2="3"/><line x1="7" y1="11" x2="7" y2="12.2"/><line x1="1.8" y1="7" x2="3" y2="7"/><line x1="11" y1="7" x2="12.2" y2="7"/><line x1="3.3" y1="3.3" x2="4.2" y2="4.2"/><line x1="9.8" y1="9.8" x2="10.7" y2="10.7"/><line x1="3.3" y1="10.7" x2="4.2" y2="9.8"/><line x1="9.8" y1="4.2" x2="10.7" y2="3.3"/><path d="M18.5 13.2A4.8 4.8 0 1 0 20.8 21 6 6 0 0 1 16 15.2a4.8 4.8 0 0 0 2.5-2z"/><line x1="4" y1="20" x2="20" y2="4"/></svg>',
+          // Moon = Dark
+          dark: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+          // Sun = Light
+          light: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
+        };
+
+        var LABELS = { auto: 'Тема: Авто', dark: 'Тема: Темна', light: 'Тема: Світла' };
+        var btn = document.getElementById('theme-toggle');
+
+        function applyTheme(theme) {
+          if (theme === 'dark' || theme === 'light') {
+            document.documentElement.setAttribute('data-theme', theme);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.innerHTML = ICONS[theme];
+          btn.setAttribute('aria-label', LABELS[theme]);
+          localStorage.setItem('neatly-legal-theme', theme);
+        }
+
+        var stored = localStorage.getItem('neatly-legal-theme') || 'auto';
+        applyTheme(stored);
+
+        btn.addEventListener('click', function () {
+          var current = localStorage.getItem('neatly-legal-theme') || 'auto';
+          var next = ORDER[(ORDER.indexOf(current) + 1) % ORDER.length];
+          applyTheme(next);
+        });
+      })();
+    </script>
+  </body>
+</html>
